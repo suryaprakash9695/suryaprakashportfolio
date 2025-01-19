@@ -99,13 +99,16 @@ header.shadow {
   grid-template-columns: 0.2fr 1fr 1fr;
   align-items: center;
   gap: 1rem;
+  background: linear-gradient(148deg, #82dae5, #ff000040);
 }
 .home-img {
   order: 3;
-  
 }
+
+
 .home-img img {
-  width: 100%;
+  box-shadow: 1px -1px 21px 0px red;
+  width: 90%;
 }
 .home-img:hover img {
   transition: 0.5s all ease-in-out;
@@ -491,5 +494,45 @@ form textarea {
   }
   .contact-button{
     margin-left: 25%;
+  }
+}
+
+#intro {
+  white-space: pre; /* Preserves white spaces */
+}
+/* animation cursor  */
+#intro::after{
+  content: '';
+  /* width: 2px;
+  height: 3px; */
+  border: 2px solid #033A80;
+  margin-left: 5px;
+  /* opacity: 0.1; */
+  /* background: #6c2323; */
+  /* position: absolute; */
+  /* transition: all; */
+  animation: blinker .8s infinite  ;
+  /* -webkit-animation: blinker 1s linear infinite ease-in-out; */
+}
+
+@keyframes blinker {
+  0%{
+    opacity: 1;
+    visibility:visible ;
+  }
+  /* 25%{
+    opacity: 1;
+  } */
+  50%{
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* 75%{
+    opacity: 1;
+  } */
+
+  100%{
+    opacity: 1;
+    visibility: visible;
   }
 }
