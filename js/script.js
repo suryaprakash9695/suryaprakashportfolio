@@ -1,21 +1,42 @@
 let header = document.querySelector('header');
 let menu = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
+let darkMode = document.querySelector('#darkmode');
 
+// Add shadow to header on scroll
 window.addEventListener('scroll', () => {
     header.classList.toggle('shadow', window.scrollY > 0);
 });
 
-menu.onclick = () => {
+// Toggle mobile menu
+menu.addEventListener('click', () => {
     navbar.classList.toggle('active');
-}
+    menu.classList.toggle('bx-x');
+});
 
-window.onscroll = () => {
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target) && !menu.contains(e.target)) {
+        navbar.classList.remove('active');
+        menu.classList.remove('bx-x');
+    }
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+        navbar.classList.remove('active');
+        menu.classList.remove('bx-x');
+    });
+});
+
+// Close mobile menu on scroll
+window.addEventListener('scroll', () => {
     navbar.classList.remove('active');
-}
+    menu.classList.remove('bx-x');
+});
 
 // Dark Mode Toggle
-const darkMode = document.getElementById('darkmode');
 const html = document.documentElement;
 
 // Check for saved theme preference

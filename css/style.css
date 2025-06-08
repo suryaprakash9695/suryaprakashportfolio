@@ -143,29 +143,75 @@ header.shadow {
   font-size: 1.61rem;
   font-weight: 600;
   color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
+
+.logo:hover {
+  color: var(--main-color);
+}
+
 .navbar {
   display: flex;
+  align-items: center;
+  gap: 1rem;
 }
+
 .navbar a {
   font-size: 1rem;
   padding: 10px 20px;
   color: var(--text-color);
   font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
 }
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--main-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
 .navbar a:hover {
   color: var(--main-color);
 }
+
+.navbar a:hover::after {
+  width: 70%;
+}
+
 #menu-icon {
   font-size: 24px;
   cursor: pointer;
   z-index: 10001;
   display: none;
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
+
+#menu-icon:hover {
+  color: var(--main-color);
+}
+
 #darkmode {
   font-size: 22px;
   cursor: pointer;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  margin-left: 1rem;
 }
+
+#darkmode:hover {
+  color: var(--main-color);
+  transform: rotate(30deg);
+}
+
 .home {
   position: relative;
   width: 100%;
