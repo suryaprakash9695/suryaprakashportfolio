@@ -8,6 +8,24 @@ window.addEventListener('scroll', () => {
     header.classList.toggle('shadow', window.scrollY > 0);
 });
 
+// Active nav link on scroll
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY + 100;
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const id = section.getAttribute('id');
+        const link = document.querySelector(`.navbar a[href="#${id}"]`);
+        if (link) {
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                document.querySelectorAll('.navbar a').forEach(a => a.classList.remove('active'));
+                link.classList.add('active');
+            }
+        }
+    });
+});
+
 // Toggle mobile menu
 menu.addEventListener('click', () => {
     navbar.classList.toggle('active');
@@ -65,12 +83,14 @@ darkMode.addEventListener('click', () => {
 const texts = [
     "Hello, I'm",
     "Surya Prakash Singh",
-    "I am a Professional Web Developer and a part time free lancer."
+    "Web Developer & Freelancer",
+    "I build responsive, user-friendly web experiences."
 ];
 
 const typingElements = [
     document.querySelector('.home-text span'),
     document.querySelector('.home-text h1'),
+    document.querySelector('.home-text h2'),
     document.querySelector('.home-text p')
 ];
 

@@ -33,25 +33,30 @@
     <!-- Navbar ends -->
 
     <!-- Home -->
-    <div class="row" style="margin-top: 10px;">
-        <section class="home" id="home">
-            <div class="home-img">
-                <img src="image/mypicnewcroped.png" style="border-radius: 30%;" alt="Surya Prakash Singh">
-                <div class="social">
-                    <a href="http://www.linkedin.com/in/surya-prakash-singh-211a5a251"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/suryaprakash9695"><i class='bx bxl-github'></i></a>
-                </div>
-        </div>
+    <section class="home" id="home">
         <div class="home-text">
-                <span></span>
-                <h1 style="color: red;"></h1>
-                <h2></h2>
-                <br>
-                <p></p>
-                <a href="#contact" class="btn">Contact Me</a>
+            <span></span>
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-primary"><i class='bx bx-send'></i> Contact Me</a>
+                <a href="#projects" class="btn btn-outline"><i class='bx bx-code-alt'></i> My Work</a>
             </div>
-        </section>
-    </div>
+        </div>
+        <div class="home-img">
+            <div class="img-wrapper">
+                <img src="image/mypicnewcroped.png" alt="Surya Prakash Singh">
+                <div class="hero-badge">
+                    <i class='bx bx-code-alt'></i> Web Developer
+                </div>
+            </div>
+            <div class="social">
+                <a href="http://www.linkedin.com/in/surya-prakash-singh-211a5a251" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/suryaprakash9695" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+            </div>
+        </div>
+    </section>
     <!--home ends-->
 
     <!-- About -->
@@ -132,7 +137,8 @@
                     </a>
                 </div>
             </div>
-        </div>
+            </div><!-- end about-content-wrapper -->
+        </div><!-- end about-container -->
     </section>
     <!--about us ends-->
 
@@ -143,7 +149,7 @@
         </div>
         <div class="skills-content">
             <div class="skills-box">
-                <i class='bx bx-code-alt'></i>
+                <div class="icon-wrap"><i class='bx bx-code-alt'></i></div>
                 <h3>Frontend Development</h3>
                 <p>Building responsive and interactive user interfaces using modern web technologies and frameworks.</p>
                 <ul class="skill-features">
@@ -155,7 +161,7 @@
             </div>
 
             <div class="skills-box">
-                <i class='bx bx-server'></i>
+                <div class="icon-wrap"><i class='bx bx-server'></i></div>
                 <h3>Backend Development</h3>
                 <p>Developing robust server-side applications and APIs using efficient programming languages and frameworks.</p>
                 <ul class="skill-features">
@@ -165,7 +171,7 @@
             </div>
 
             <div class="skills-box">
-                <i class='bx bx-cog'></i>
+                <div class="icon-wrap"><i class='bx bx-cog'></i></div>
                 <h3>Additional Skills</h3>
                 <p>Complementary skills that enhance development workflow and project delivery.</p>
                 <ul class="skill-features">
@@ -187,7 +193,7 @@
         </div>
         <div class="services-content">
             <div class="services-box">
-                <i class='bx bx-code-alt'></i>
+                <div class="icon-wrap"><i class='bx bx-code-alt'></i></div>
                 <h3>Web Development</h3>
                 <p>Creating responsive and dynamic websites using modern technologies like HTML5, CSS3, and JavaScript.
                     Building user-friendly interfaces that work seamlessly across all devices.</p>
@@ -199,7 +205,7 @@
             </div>
 
             <div class="services-box">
-                <i class='bx bx-server'></i>
+                <div class="icon-wrap"><i class='bx bx-server'></i></div>
                 <h3>Backend Development</h3>
                 <p>Developing robust server-side applications with PHP and Java. Implementing secure database solutions
                     and RESTful APIs for seamless data management.</p>
@@ -211,7 +217,7 @@
             </div>
 
             <div class="services-box">
-                <i class='bx bx-brush'></i>
+                <div class="icon-wrap"><i class='bx bx-brush'></i></div>
                 <h3>UI/UX Design</h3>
                 <p>Designing intuitive and engaging user interfaces. Creating wireframes, prototypes, and implementing
                     modern design principles for optimal user experience.</p>
