@@ -1,181 +1,137 @@
-let header = document.querySelector('header');
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-let darkMode = document.querySelector('#darkmode');
-
-// Add shadow to header on scroll
+/* ===== HEADER SCROLL ===== */
+const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
-    header.classList.toggle('shadow', window.scrollY > 0);
+    header.classList.toggle('scrolled', window.scrollY > 10);
 });
 
-// Active nav link on scroll
-const sections = document.querySelectorAll('section[id]');
+/* ===== MOBILE MENU ===== */
+const menuBtn = document.getElementById('menu-icon');
+const navbar  = document.querySelector('.navbar');
+
+menuBtn.addEventListener('click', () => {
+    navbar.classList.toggle('open');
+    const icon = menuBtn.querySelector('[data-lucide]');
+    if (icon) icon.setAttribute('data-lucide', navbar.classList.contains('open') ? 'x' : 'menu');
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+});
+
+// Close on nav link click
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navbar.classList.remove('open');
+        const icon = menuBtn.querySelector('[data-lucide]');
+        if (icon) icon.setAttribute('data-lucide', 'menu');
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+});
+
+// Close on outside click
+document.addEventListener('click', e => {
+    if (!navbar.contains(e.target) && !menuBtn.contains(e.target)) {
+        navbar.classList.remove('open');
+        const icon = menuBtn.querySelector('[data-lucide]');
+        if (icon) icon.setAttribute('data-lucide', 'menu');
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+    }
+});
+
+/* ===== ACTIVE NAV ON SCROLL ===== */
+const sections  = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.nav-link');
+
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY + 100;
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const id = section.getAttribute('id');
-        const link = document.querySelector(`.navbar a[href="#${id}"]`);
-        if (link) {
-            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                document.querySelectorAll('.navbar a').forEach(a => a.classList.remove('active'));
-                link.classList.add('active');
-            }
+        if (scrollY >= section.offsetTop && scrollY < section.offsetTop + section.offsetHeight) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`.nav-link[href="#${section.id}"]`);
+            if (active) active.classList.add('active');
         }
     });
 });
 
-// Toggle mobile menu
-menu.addEventListener('click', () => {
-    navbar.classList.toggle('active');
-    menu.classList.toggle('bx-x');
-});
+/* ===== DARK MODE ===== */
+const darkBtn = document.getElementById('darkmode');
+const html    = document.documentElement;
 
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!navbar.contains(e.target) && !menu.contains(e.target)) {
-        navbar.classList.remove('active');
-        menu.classList.remove('bx-x');
-    }
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.navbar a').forEach(link => {
-    link.addEventListener('click', () => {
-        navbar.classList.remove('active');
-        menu.classList.remove('bx-x');
-    });
-});
-
-// Close mobile menu on scroll
-window.addEventListener('scroll', () => {
-    navbar.classList.remove('active');
-    menu.classList.remove('bx-x');
-});
-
-// Dark Mode Toggle
-const html = document.documentElement;
-
-// Check for saved theme preference
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-    html.setAttribute('data-theme', savedTheme);
-    if (savedTheme === 'dark') {
-        darkMode.classList.replace('bx-moon', 'bx-sun');
-    }
+const saved = localStorage.getItem('theme');
+if (saved) {
+    html.setAttribute('data-theme', saved);
+    const icon = darkBtn.querySelector('[data-lucide]');
+    if (icon && saved === 'dark') icon.setAttribute('data-lucide', 'sun');
 }
 
-// Toggle dark mode
-darkMode.addEventListener('click', () => {
-    if (html.getAttribute('data-theme') === 'dark') {
-        html.setAttribute('data-theme', 'light');
-        darkMode.classList.replace('bx-sun', 'bx-moon');
-        localStorage.setItem('theme', 'light');
-    } else {
-        html.setAttribute('data-theme', 'dark');
-        darkMode.classList.replace('bx-moon', 'bx-sun');
-        localStorage.setItem('theme', 'dark');
-    }
+darkBtn.addEventListener('click', () => {
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    const icon = darkBtn.querySelector('[data-lucide]');
+    if (icon) icon.setAttribute('data-lucide', isDark ? 'moon' : 'sun');
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
 });
 
-// Typing Animation
-const texts = [
-    "Hello, I'm",
-    "Surya Prakash Singh",
-    "Web Developer & Freelancer",
-    "I build responsive, user-friendly web experiences."
+/* ===== TYPING ANIMATION ===== */
+const typingData = [
+    { el: document.querySelector('.home-name'), text: 'Surya Prakash Singh' },
+    { el: document.querySelector('.home-role'), text: 'Web Developer & Founder - Team TechPro' },
+    { el: document.querySelector('.home-desc'), text: 'I build responsive, user-friendly websites and web applications using modern technologies.' }
 ];
 
-const typingElements = [
-    document.querySelector('.home-text span'),
-    document.querySelector('.home-text h1'),
-    document.querySelector('.home-text h2'),
-    document.querySelector('.home-text p')
-];
+let step = 0;
 
-let currentTextIndex = 0;
-let charIndex = 0;
-let typingDelay = 100;
-
-function type() {
-    const currentElement = typingElements[currentTextIndex];
-    const currentText = texts[currentTextIndex];
-
-    if (charIndex < currentText.length) {
-        currentElement.textContent += currentText.charAt(charIndex);
-        charIndex++;
-        setTimeout(type, typingDelay);
-    } else {
-        // Move to the next text after a pause
-        currentTextIndex++;
-        charIndex = 0;
-        if (currentTextIndex < texts.length) {
-            setTimeout(type, 1000); // Pause before typing next line
-        } else {
-            // All texts typed, stop or loop
-            // For now, it stops. You can add looping logic here if needed.
+function typeNext() {
+    if (step >= typingData.length) return;
+    const { el, text } = typingData[step];
+    if (!el) { step++; typeNext(); return; }
+    el.textContent = '';
+    let i = 0;
+    const interval = setInterval(() => {
+        el.textContent += text[i++];
+        if (i >= text.length) {
+            clearInterval(interval);
+            step++;
+            setTimeout(typeNext, 400);
         }
-    }
+    }, step === 0 ? 60 : step === 1 ? 55 : 18);
 }
 
-// Start typing animation when page loads
 window.addEventListener('load', () => {
-    // Clear any existing text in the target elements
-    typingElements.forEach(element => {
-        if (element) element.textContent = '';
-    });
-    type();
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+    typeNext();
 });
 
-// Contact Form Handling
+/* ===== CONTACT FORM ===== */
 const contactForm = document.getElementById('contactForm');
+const formStatus  = document.getElementById('formStatus');
 const formMessage = document.getElementById('formMessage');
-const formStatus = document.getElementById('formStatus');
 
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    // Disable submit button and show loading state
-    const submitButton = contactForm.querySelector('button[type="submit"]');
-    const originalButtonText = submitButton.innerHTML;
-    submitButton.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Sending...';
-    submitButton.disabled = true;
-    
-    try {
-        const formData = new FormData(contactForm);
-        const response = await fetch(contactForm.action, {
-            method: 'POST',
-            body: formData
-        });
-        
-        const result = await response.json();
-        
-        if (result.success) {
-            // Show success message
-            formMessage.textContent = 'Message sent successfully! I will get back to you soon.';
-            formMessage.className = 'message success';
+if (contactForm) {
+    contactForm.addEventListener('submit', async e => {
+        e.preventDefault();
+        const btn = contactForm.querySelector('button[type="submit"]');
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Sending...';
+        btn.disabled = true;
+
+        try {
+            const res    = await fetch(contactForm.action, { method: 'POST', body: new FormData(contactForm) });
+            const result = await res.json();
+            if (result.success) {
+                formMessage.textContent = '✓ Message sent! I\'ll get back to you soon.';
+                formMessage.className   = 'message success';
+                contactForm.reset();
+            } else {
+                throw new Error(result.message || 'Something went wrong.');
+            }
+        } catch (err) {
+            formMessage.textContent = '✕ ' + (err.message || 'Failed to send. Please try again.');
+            formMessage.className   = 'message error';
+        } finally {
             formStatus.style.display = 'block';
-            
-            // Reset form
-            contactForm.reset();
-        } else {
-            throw new Error(result.message || 'Something went wrong');
+            btn.innerHTML = orig;
+            btn.disabled  = false;
+            setTimeout(() => { formStatus.style.display = 'none'; }, 5000);
         }
-    } catch (error) {
-        // Show error message
-        formMessage.textContent = error.message || 'Failed to send message. Please try again.';
-        formMessage.className = 'message error';
-        formStatus.style.display = 'block';
-    } finally {
-        // Reset button state
-        submitButton.innerHTML = originalButtonText;
-        submitButton.disabled = false;
-        
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            formStatus.style.display = 'none';
-        }, 5000);
-    }
-});
-
+    });
+}

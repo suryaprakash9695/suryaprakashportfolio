@@ -1,423 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surya Prakash Singh</title>
-    <link rel="shortcut icon" href="image/_Pngtree_initial_letter_sp_logo_template_3582041-removebg-preview.png"
-        type="image/x-icon">
+    <title>Surya Prakash Singh — Web Developer</title>
+    <link rel="shortcut icon" href="image/_Pngtree_initial_letter_sp_logo_template_3582041-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
-
 <body>
-    <!-- Navbar -->
-    <header>
-        <a href="#" class="logo">SURYA PRAKASH SINGH</a>
 
-        <div class="bx bx-menu" id="menu-icon"></div>
+<!-- ===== HEADER ===== -->
+<header id="header">
+    <a href="#home" class="logo">SP<span>.</span></a>
+    <nav class="navbar">
+        <a href="#home"     class="nav-link active">Home</a>
+        <a href="#about"    class="nav-link">About</a>
+        <a href="#skills"   class="nav-link">Skills</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact"  class="nav-link">Contact</a>
+    </nav>
+    <div class="header-actions">
+        <button id="darkmode" aria-label="Toggle dark mode">
+            <i data-lucide="moon"></i>
+        </button>
+        <button class="menu-btn" id="menu-icon" aria-label="Toggle menu">
+            <i data-lucide="menu"></i>
+        </button>
+    </div>
+</header>
 
-        <ul class="navbar">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <div class="bx bx-moon" id="darkmode"></div>
-        </ul>
-    </header>
-    <!-- Navbar ends -->
-
-    <!-- Home -->
-    <section class="home" id="home">
-        <div class="home-text">
-            <span></span>
-            <h1></h1>
-            <h2></h2>
-            <p></p>
-            <div class="hero-btns">
-                <a href="#contact" class="btn btn-primary"><i class='bx bx-send'></i> Contact Me</a>
-                <a href="#projects" class="btn btn-outline"><i class='bx bx-code-alt'></i> My Work</a>
-            </div>
-        </div>
-        <div class="home-img">
-            <div class="img-wrapper">
-                <img src="image/mypicnewcroped.png" alt="Surya Prakash Singh">
-                <div class="hero-badge">
-                    <i class='bx bx-code-alt'></i> Web Developer
-                </div>
-            </div>
-            <div class="social">
-                <a href="http://www.linkedin.com/in/surya-prakash-singh-211a5a251" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/suryaprakash9695" aria-label="GitHub"><i class='bx bxl-github'></i></a>
-            </div>
-        </div>
-    </section>
-    <!--home ends-->
-
-    <!-- About -->
-    <section class="about" id="about">
-        <div class="heading">
-            <h2>About</h2>
-            
-        </div>
-        <!-- About Content -->
-        <div class="about-container">
-            <div class="about-content-wrapper">
-                <!-- Left Column: Introduction Text -->
-                <div class="about-text">
-                    <h3>Introduction</h3>
-                    <div class="about-content">
-                        <p>Hello! I'm Surya Prakash Singh, a passionate web developer and designer. I hold a Diploma in Computer 
-                            Science and am currently pursuing B.Tech from Galgotias College of Engineering Technology.</p>
-
-                        <p>I specialize in building responsive, user-friendly websites and web applications using modern technologies, 
-                            combining technical expertise with creative problem-solving.</p>
-
-                        <p>My journey in web development began with a curiosity for creating things that live on the internet. 
-                            I have experience working with various technologies including HTML5, CSS3, JavaScript, PHP, Java, and MySQL.</p>
-
-                        <p>I believe in writing clean, maintainable code and following best practices to ensure scalability and 
-                            performance. My goal is to create digital experiences that are not only visually appealing but also 
-                            highly functional and user-centric.</p>
-
-                        <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
-                            or continuously learning to stay updated with the latest industry trends and best practices.</p>
-                    </div>
-                </div>
-
-            <!-- Bottom: Get In Touch Section -->
-            <div class="information">
-                <h4 class="sidebar-title">Get In Touch</h4>
-                <div class="info-boxes-container">
-                    <div class="info-box">
-                        <div class="info-icon">
-                            <i class='bx bxs-phone'></i>
-                        </div>
-                        <div class="info-content">
-                            <span class="info-label">Phone</span>
-                            <a href="tel:+919695167669" style="text-decoration: none; color: inherit;">
-                                <span>+91 9695167669</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="info-box">
-                        <div class="info-icon">
-                            <i class='bx bxs-envelope'></i>
-                        </div>
-                        <div class="info-content">
-                            <span class="info-label">Email</span>
-                            <a href="mailto:surya9792844645@gmail.com" style="text-decoration: none; color: inherit;">
-                                <span>surya9792844645@gmail.com</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="info-box">
-                        <div class="info-icon">
-                            <i class='bx bxs-map'></i>
-                        </div>
-                        <div class="info-content">
-                            <span class="info-label">Location</span>
-                            <a href="https://www.google.com/maps/place/Kushinagar,+Uttar+Pradesh" target="_blank"
-                                style="text-decoration: none; color: inherit;">
-                                <span>Kushinagar, Uttar Pradesh, India</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cta-section">
-                    <a href="image/Surya Prakash Singh (CV).pdf" class="btn btn-download" target="_blank">
-                        <i class='bx bx-download'></i>
-                        <span>Download CV</span>
-                    </a>
-                </div>
-            </div>
-            </div><!-- end about-content-wrapper -->
-        </div><!-- end about-container -->
-    </section>
-    <!--about us ends-->
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="heading">
-            <h2>Skills</h2>
-        </div>
-        <div class="skills-content">
-            <div class="skills-box">
-                <div class="icon-wrap"><i class='bx bx-code-alt'></i></div>
-                <h3>Frontend Development</h3>
-                <p>Building responsive and interactive user interfaces using modern web technologies and frameworks.</p>
-                <ul class="skill-features">
-                    <li>HTML5 & CSS3</li>
-                    <li>JavaScript</li>
-                    <li>Responsive Web Design</li>
-                    <li>Bootstrap Framework</li>
-                </ul>
-            </div>
-
-            <div class="skills-box">
-                <div class="icon-wrap"><i class='bx bx-server'></i></div>
-                <h3>Backend Development</h3>
-                <p>Developing robust server-side applications and APIs using efficient programming languages and frameworks.</p>
-                <ul class="skill-features">
-                    <li>PHP Programming</li>
-                    <li>Java Development</li>
-                </ul>
-            </div>
-
-            <div class="skills-box">
-                <div class="icon-wrap"><i class='bx bx-cog'></i></div>
-                <h3>Additional Skills</h3>
-                <p>Complementary skills that enhance development workflow and project delivery.</p>
-                <ul class="skill-features">
-                    <li>Problem Solving</li>
-                    <li>Debugging & Testing</li>
-                    <li>Deployment</li>
-                    <li>API Development</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!--skills ends-->
-
-    <!--our services -->
-    <section class="services" id="services">
-        <div class="heading">
-            <h2>Services</h2>
-            <span>What I Offer</span>
-        </div>
-        <div class="services-content">
-            <div class="services-box">
-                <div class="icon-wrap"><i class='bx bx-code-alt'></i></div>
-                <h3>Web Development</h3>
-                <p>Creating responsive and dynamic websites using modern technologies like HTML5, CSS3, and JavaScript.
-                    Building user-friendly interfaces that work seamlessly across all devices.</p>
-                <ul class="service-features">
-                    <li>Responsive Web Design</li>
-                    <li>Modern UI Implementation</li>
-                </ul>
-                <a href="https://teamtechpro.netlify.app/services" class="service-link" target="_blank">Learn More</a>
-            </div>
-
-            <div class="services-box">
-                <div class="icon-wrap"><i class='bx bx-server'></i></div>
-                <h3>Backend Development</h3>
-                <p>Developing robust server-side applications with PHP and Java. Implementing secure database solutions
-                    and RESTful APIs for seamless data management.</p>
-                <ul class="service-features">
-                    <li>Database Design & Management</li>
-                    <li>API Development</li>
-                </ul>
-                <a href="https://teamtechpro.netlify.app/services" class="service-link" target="_blank">Learn More </a>
-            </div>
-
-            <div class="services-box">
-                <div class="icon-wrap"><i class='bx bx-brush'></i></div>
-                <h3>UI/UX Design</h3>
-                <p>Designing intuitive and engaging user interfaces. Creating wireframes, prototypes, and implementing
-                    modern design principles for optimal user experience.</p>
-                <ul class="service-features">
-                    <li>User Interface Design</li>
-                    <li>User Experience Planning</li>
-                </ul>
-                <a href="https://teamtechpro.netlify.app/services" class="service-link" target="_blank">Learn More </a>
-            </div>
-        </div>
-    </section>
-    <!--our services -->
-
-    <!--projects -->
-    <section class="portfolio" id="projects">
-        <div class="heading">
-            <h2>Projects</h2>
-            <span>My Recent Work</span>
-        </div>
-
-        <div class="projects-container">
-            <!-- Project Card 1 -->
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-icon">
-                        <i class='bx bx-code-alt'></i>
-                    </div>
-                    <h3>Personal Portfolio</h3>
-                    <p>A modern, responsive portfolio website showcasing my skills and projects. Built with HTML5, CSS3,
-                        and JavaScript.</p>
-                    <div class="project-tech">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/suryaprakash9695/suryaprakashportfolio" target="_blank" class="btn">
-                            <i class='bx bxl-github'></i> View Code
-                        </a>
-                        <a href="#" class="btn">Live Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Card 2 -->
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-icon">
-                        <i class='bx bx-globe'></i>
-                    </div>
-                    <h3>Team Tech Pro</h3>
-                    <p>A professional website for a tech company offering various IT services. Features responsive
-                        design and modern UI.</p>
-                    <div class="project-tech">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/suryaprakash9695/teamtechpro" target="_blank" class="btn">
-                            <i class='bx bxl-github'></i> View Code
-                        </a>
-                        <a href="https://teamtechpro.netlify.app" target="_blank" class="btn">Live Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Card 3 -->
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-icon">
-                        <i class='bx bx-calculator'></i>
-                    </div>
-                    <h3>Calculator App</h3>
-                    <p>A fully functional calculator application with a clean interface and advanced mathematical
-                        operations.</p>
-                    <div class="project-tech">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/suryaprakash9695/calculator" target="_blank" class="btn">
-                            <i class='bx bxl-github'></i> View Code
-                        </a>
-                        <a href="https://calculator-surya.netlify.app" target="_blank" class="btn">Live Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="more-projects">
-            <a href="https://github.com/suryaprakash9695" target="_blank" class="btn">
-                <i class='bx bxl-github'></i> View More Projects
+<!-- ===== HOME ===== -->
+<section class="home" id="home">
+    <div class="home-text">
+        <p class="home-greeting">👋 Hello, I'm</p>
+        <h1 class="home-name"></h1>
+        <h2 class="home-role"></h2>
+        <p class="home-desc"></p>
+        <div class="home-btns">
+            <a href="#contact" class="btn btn-primary">
+                <i data-lucide="send"></i> Hire Me
             </a>
-            <a href="https://liveproject-links.netlify.app/" target="_blank" class="btn">
-                View Live Projects
+            <a href="#projects" class="btn btn-ghost">
+                <i data-lucide="layout-grid"></i> My Work
             </a>
         </div>
-    </section>
-    <!--projects ends-->
-
-    <!--contact us -->
-    <section class="contact" id="contact">
-        <div class="heading">
-            <h2>Contact</h2>
-            <span>Let's Connect</span>
-        </div>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Get in Touch</h3>
-                <p>Feel free to reach out to me for any questions or opportunities. I'll get back to you as soon as
-                    possible.</p>
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <i class='bx bxs-envelope'></i>
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:surya9792844645@gmail.com">surya9792844645@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class='bx bxs-phone'></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <a href="tel:+919695167669">+91 9695167669</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class='bx bxs-map'></i>
-                        <div>
-                            <h4>Location</h4>
-                            <a href="https://www.google.com/maps/place/Kushinagar,+Uttar+Pradesh"
-                                target="_blank">Kushinagar, Uttar Pradesh, India</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class='bx bxs-share-alt'></i>
-                        <div>
-                            <h4>Social Media</h4>
-                            <div class="social-links">
-                                <a href="https://www.facebook.com/profile.php?id=100015000917519" target="_blank" aria-label="Facebook">
-                                    <i class='bx bxl-facebook'></i>
-                                </a>
-                                <a href="https://twitter.com/SuryaPrakash969" target="_blank" aria-label="Twitter">
-                                    <i class='bx bxl-twitter'></i>
-                                </a>
-                                <a href="https://instagram.com/surya_prakash__singh" target="_blank" aria-label="Instagram">
-                                    <i class='bx bxl-instagram'></i>
-                                </a>
-                                <a href="http://www.linkedin.com/in/surya-prakash-singh-211a5a251" target="_blank" aria-label="LinkedIn">
-                                    <i class='bx bxl-linkedin'></i>
-                                </a>
-                                <a href="https://github.com/suryaprakash9695" target="_blank" aria-label="GitHub">
-                                    <i class='bx bxl-github'></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form">
-                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" name="name" id="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" name="email" id="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea name="message" id="message" rows="6" placeholder="Write your message here..."
-                            required></textarea>
-                    </div>
-                    <input type="hidden" name="access_key" value="8960d0ed-140e-42c8-a4d8-355667a249af">
-                    <button type="submit" class="contact-button">
-                        <span>Send Message</span>
-                        <i class='bx bx-send'></i>
-                    </button>
-                </form>
-                <div id="formStatus" class="form-status">
-                    <p id="formMessage" class="message"></p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--contact us -->
-
-    <!-- Copyright -->
-    <div class="copyright">
-        <div class="copyright-content">
-            <p>&copy; 2025 All rights reserved.</p>
-            <p>Designed & Developed with by - <a href="index.html" class="developer-link">Surya Prakash Singh</a></p>
+        <div class="home-socials">
+            <a href="http://www.linkedin.com/in/surya-prakash-singh-211a5a251" target="_blank" aria-label="LinkedIn" class="social-btn">
+                <i data-lucide="briefcase"></i>
+            </a>
+            <a href="https://github.com/suryaprakash9695" target="_blank" aria-label="GitHub" class="social-btn">
+                <i data-lucide="code-2"></i>
+            </a>
         </div>
     </div>
+    <div class="home-visual">
+        <div class="avatar-ring">
+            <div class="avatar-img">
+                <img src="image/mypicnewcroped.png" alt="Surya Prakash Singh">
+            </div>
+        </div>
+        <div class="float-badge badge-1">
+            <i data-lucide="code-2"></i>
+            <span>Web Dev</span>
+        </div>
+        <div class="float-badge badge-2">
+            <i data-lucide="pen-tool"></i>
+            <span>UI Design</span>
+        </div>
+    </div>
+    <div class="home-scroll">
+        <a href="#about"><i data-lucide="chevrons-down"></i></a>
+    </div>
+</section>
 
-    <script src="./js/script.js"></script>
-    <script src="./js/server.js"></script>
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+    <div class="section-header">
+        <span class="section-tag">Who I Am</span>
+        <h2>About Me</h2>
+    </div>
+    <div class="about-grid">
+        <div class="about-card">
+            <h3><i data-lucide="user-round"></i> Introduction</h3>
+            <p>Hello! I'm <strong>Surya Prakash Singh</strong>, a passionate web developer and designer. I hold a Diploma in Computer Science and am currently pursuing B.Tech from Galgotias College of Engineering Technology.</p>
+            <p>I specialize in building responsive, user-friendly websites and web applications using modern technologies, combining technical expertise with creative problem-solving.</p>
+            <p>My journey in web development began with a curiosity for creating things that live on the internet. I have experience with HTML5, CSS3, JavaScript, PHP, Java, and MySQL.</p>
+            <p>I believe in writing clean, maintainable code and following best practices to ensure scalability and performance.</p>
+        </div>
+        <div class="about-info-card">
+            <h3><i data-lucide="contact"></i> Quick Info</h3>
+            <ul class="info-list">
+                <li>
+                    <span class="info-icon-wrap"><i data-lucide="phone"></i></span>
+                    <div>
+                        <small>Phone</small>
+                        <a href="tel:+919695167669">+91 9695167669</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="info-icon-wrap"><i data-lucide="mail"></i></span>
+                    <div>
+                        <small>Email</small>
+                        <a href="mailto:surya9792844645@gmail.com">surya9792844645@gmail.com</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="info-icon-wrap"><i data-lucide="map-pin"></i></span>
+                    <div>
+                        <small>Location</small>
+                        <a href="https://www.google.com/maps/place/Kushinagar,+Uttar+Pradesh" target="_blank">Kushinagar, UP, India</a>
+                    </div>
+                </li>
+            </ul>
+            <a href="image/Surya Prakash Singh (CV).pdf" class="btn btn-primary btn-full" target="_blank">
+                <i data-lucide="download"></i> Download CV
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="skills" id="skills">
+    <div class="section-header">
+        <span class="section-tag">What I Know</span>
+        <h2>My Skills</h2>
+    </div>
+    <div class="cards-grid">
+        <div class="skill-card">
+            <div class="card-icon"><i data-lucide="monitor-smartphone"></i></div>
+            <h3>Frontend</h3>
+            <p>Building responsive, interactive UIs with modern web technologies.</p>
+            <ul class="tag-list">
+                <li>HTML5 &amp; CSS3</li>
+                <li>JavaScript</li>
+                <li>Responsive Design</li>
+                <li>Bootstrap</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <div class="card-icon"><i data-lucide="server"></i></div>
+            <h3>Backend</h3>
+            <p>Developing robust server-side applications and RESTful APIs.</p>
+            <ul class="tag-list">
+                <li>PHP</li>
+                <li>Java</li>
+                <li>MySQL</li>
+                <li>REST APIs</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <div class="card-icon"><i data-lucide="wrench"></i></div>
+            <h3>Tools &amp; More</h3>
+            <p>Complementary skills that enhance development workflow.</p>
+            <ul class="tag-list">
+                <li>Problem Solving</li>
+                <li>Debugging</li>
+                <li>Deployment</li>
+                <li>Git &amp; GitHub</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+    <div class="section-header">
+        <span class="section-tag">What I Offer</span>
+        <h2>Services</h2>
+        <p class="section-sub">
+            Services delivered through my startup
+            <a href="https://teamtechpro.netlify.app" target="_blank" class="brand-link">
+                <i data-lucide="external-link"></i> Team Tech Pro
+            </a>
+        </p>
+    </div>
+    <div class="cards-grid">
+        <div class="service-card">
+            <div class="card-icon"><i data-lucide="globe"></i></div>
+            <h3>Web Development</h3>
+            <p>We build responsive, dynamic websites using HTML5, CSS3, and JavaScript that work seamlessly across all devices and browsers.</p>
+            <ul class="feature-list">
+                <li><i data-lucide="check-circle-2"></i> Responsive Web Design</li>
+                <li><i data-lucide="check-circle-2"></i> Modern UI Implementation</li>
+                <li><i data-lucide="check-circle-2"></i> Cross-browser Compatibility</li>
+            </ul>
+            <a href="https://teamtechpro.netlify.app/services" class="card-link" target="_blank">
+                View Service <i data-lucide="arrow-right"></i>
+            </a>
+        </div>
+        <div class="service-card">
+            <div class="card-icon"><i data-lucide="database"></i></div>
+            <h3>Backend Development</h3>
+            <p>We develop robust server-side applications with PHP and Java, delivering secure database solutions and RESTful APIs for seamless data management.</p>
+            <ul class="feature-list">
+                <li><i data-lucide="check-circle-2"></i> Database Design</li>
+                <li><i data-lucide="check-circle-2"></i> API Development</li>
+                <li><i data-lucide="check-circle-2"></i> Server Management</li>
+            </ul>
+            <a href="https://teamtechpro.netlify.app/services" class="card-link" target="_blank">
+                View Service <i data-lucide="arrow-right"></i>
+            </a>
+        </div>
+        <div class="service-card">
+            <div class="card-icon"><i data-lucide="pen-tool"></i></div>
+            <h3>UI/UX Design</h3>
+            <p>We design intuitive, engaging user interfaces with wireframes, prototypes, and modern design principles for the best user experience.</p>
+            <ul class="feature-list">
+                <li><i data-lucide="check-circle-2"></i> User Interface Design</li>
+                <li><i data-lucide="check-circle-2"></i> UX Planning</li>
+                <li><i data-lucide="check-circle-2"></i> Prototyping</li>
+            </ul>
+            <a href="https://teamtechpro.netlify.app/services" class="card-link" target="_blank">
+                View Service <i data-lucide="arrow-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="services-cta">
+        <p>Want to work with us?</p>
+        <a href="https://teamtechpro.netlify.app" target="_blank" class="btn btn-primary">
+            <i data-lucide="external-link"></i> Visit Team Tech Pro
+        </a>
+    </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section class="portfolio" id="projects">
+    <div class="section-header">
+        <span class="section-tag">My Work</span>
+        <h2>Projects</h2>
+    </div>
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-icon-wrap"><i data-lucide="code-2"></i></div>
+                <div class="project-links-top">
+                    <a href="https://github.com/suryaprakash9695/suryaprakashportfolio" target="_blank" title="View Code"><i data-lucide="code-2"></i></a>
+                    <a href="#" title="Live Demo"><i data-lucide="external-link"></i></a>
+                </div>
+            </div>
+            <h3>Personal Portfolio</h3>
+            <p>A modern, responsive portfolio website showcasing skills and projects. Built with HTML5, CSS3, and JavaScript.</p>
+            <div class="tech-tags">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-icon-wrap"><i data-lucide="globe-2"></i></div>
+                <div class="project-links-top">
+                    <a href="https://github.com/suryaprakash9695/teamtechpro" target="_blank" title="View Code"><i data-lucide="code-2"></i></a>
+                    <a href="https://teamtechpro.netlify.app" target="_blank" title="Live Demo"><i data-lucide="external-link"></i></a>
+                </div>
+            </div>
+            <h3>Team Tech Pro</h3>
+            <p>A professional website for a tech company offering various IT services. Features responsive design and modern UI.</p>
+            <div class="tech-tags">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-icon-wrap"><i data-lucide="calculator"></i></div>
+                <div class="project-links-top">
+                    <a href="https://github.com/suryaprakash9695/calculator" target="_blank" title="View Code"><i data-lucide="code-2"></i></a>
+                    <a href="https://calculator-surya.netlify.app" target="_blank" title="Live Demo"><i data-lucide="external-link"></i></a>
+                </div>
+            </div>
+            <h3>Calculator App</h3>
+            <p>A fully functional calculator application with a clean interface and advanced mathematical operations.</p>
+            <div class="tech-tags">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            </div>
+        </div>
+    </div>
+    <div class="projects-more">
+        <a href="https://github.com/suryaprakash9695" target="_blank" class="btn btn-ghost">
+            <i data-lucide="code-2"></i> GitHub
+        </a>
+        <a href="https://liveproject-links.netlify.app/" target="_blank" class="btn btn-primary">
+            <i data-lucide="rocket"></i> Live Projects
+        </a>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+    <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2>Contact Me</h2>
+    </div>
+    <div class="contact-grid">
+        <div class="contact-info-card">
+            <h3>Let's Talk</h3>
+            <p>Feel free to reach out for any questions or opportunities. I'll get back to you as soon as possible.</p>
+            <ul class="contact-list">
+                <li>
+                    <span class="c-icon"><i data-lucide="mail"></i></span>
+                    <div>
+                        <strong>Email</strong>
+                        <a href="mailto:surya9792844645@gmail.com">surya9792844645@gmail.com</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="c-icon"><i data-lucide="phone"></i></span>
+                    <div>
+                        <strong>Phone</strong>
+                        <a href="tel:+919695167669">+91 9695167669</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="c-icon"><i data-lucide="map-pin"></i></span>
+                    <div>
+                        <strong>Location</strong>
+                        <a href="https://www.google.com/maps/place/Kushinagar,+Uttar+Pradesh" target="_blank">Kushinagar, UP, India</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="contact-socials">
+                <a href="https://www.facebook.com/profile.php?id=100015000917519" target="_blank" aria-label="Facebook" class="cs-fb"><i data-lucide="share-2"></i></a>
+                <a href="https://twitter.com/SuryaPrakash969" target="_blank" aria-label="Twitter" class="cs-tw"><i data-lucide="message-circle"></i></a>
+                <a href="https://instagram.com/surya_prakash__singh" target="_blank" aria-label="Instagram" class="cs-ig"><i data-lucide="camera"></i></a>
+                <a href="http://www.linkedin.com/in/surya-prakash-singh-211a5a251" target="_blank" aria-label="LinkedIn" class="cs-li"><i data-lucide="briefcase"></i></a>
+                <a href="https://github.com/suryaprakash9695" target="_blank" aria-label="GitHub" class="cs-gh"><i data-lucide="code-2"></i></a>
+            </div>
+        </div>
+        <div class="contact-form-card">
+            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                <input type="hidden" name="access_key" value="8960d0ed-140e-42c8-a4d8-355667a249af">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name"><i data-lucide="user"></i> Name</label>
+                        <input type="text" name="name" id="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i data-lucide="at-sign"></i> Email</label>
+                        <input type="email" name="email" id="email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message"><i data-lucide="message-square"></i> Message</label>
+                    <textarea name="message" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="contact-button">
+                    <i data-lucide="send"></i> Send Message
+                </button>
+            </form>
+            <div id="formStatus" class="form-status" style="display:none;">
+                <p id="formMessage" class="message"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="footer-inner">
+        <p>&copy; 2025 <a href="#home">Surya Prakash Singh</a>. All rights reserved.</p>
+        <p>Designed &amp; Developed with <i data-lucide="heart"></i> by Surya</p>
+    </div>
+</footer>
+
+<script src="./js/lucide.min.js"></script>
+<script src="./js/script.js"></script>
 </body>
-
 </html>
+
